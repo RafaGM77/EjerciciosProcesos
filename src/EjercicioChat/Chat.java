@@ -2,7 +2,7 @@ package EjercicioChat;
 
 public class Chat {
 
-	public synchronized String Answer(String answer) {
+	public synchronized void Answer(String answer) {
 		
 		notify();
 		
@@ -14,11 +14,9 @@ public class Chat {
 		catch (InterruptedException e) {
 			System.out.println("Error -> " + e.getMessage());
 		}
-		
-		return answer;
 	}
 	
-	public synchronized String Question(String question) {
+	public synchronized void Question(String question) {
 		
 		notify();
 		
@@ -30,7 +28,5 @@ public class Chat {
 		catch (InterruptedException e) {
 			System.out.println("Error -> " + e.getMessage());
 		}
-		
-		return question;
 	}
 }
