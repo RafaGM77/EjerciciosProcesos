@@ -11,7 +11,6 @@ class Tarea2 implements Runnable {
 
 	   public void run() {
 	    
-
 	      for (int i = 0; i < s2.length; i++) {
 	    	  m.Answer(s2[i]);
 	      }
